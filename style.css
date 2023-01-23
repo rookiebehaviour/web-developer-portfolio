@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  transform: rotate(180deg);
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+ul {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+li {
+  list-style: none;
+  padding: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  max-width: 100%;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+main a {
+  font-size: 1.5rem;
+}
+
+section {
+  background-color: pink;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+}
