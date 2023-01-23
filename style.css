@@ -6,13 +6,11 @@
 
 main h1 {
   font-size: 3rem;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 main h2 {
   font-size: 2rem;
-  transform: rotate(180deg);
-  text-align: center;
 }
 
 nav {
@@ -38,7 +36,8 @@ a {
   text-decoration: none;
 }
 
-main {
+main,
+#projects {
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -54,6 +53,7 @@ main {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: white;
+
   max-width: 100%;
   padding: 1rem;
   min-height: 100vh;
@@ -64,12 +64,49 @@ main a {
 }
 
 section {
-  background-color: pink;
   min-height: 100vh;
   max-width: 100%;
   padding: 1rem;
 }
 
+#about,
+#contact {
+  background: #536976; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #292e49, #536976);
+  background: linear-gradient(to bottom, #292e49, #536976);
+  color: white;
+
+  max-width: 100%;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
 .container {
-  width: 100%;
+  max-width: 100%;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.skills {
+  text-align: center;
+}
+
+.profile-photo {
+  margin: 1rem;
+  max-width: 20rem;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 5px);
 }
