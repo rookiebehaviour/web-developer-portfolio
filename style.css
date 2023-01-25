@@ -137,20 +137,64 @@ button {
   line-height: 1.5;
 }
 
+.projects {
+  max-width: 100%;
+
+  gap: 1rem;
+}
+
 .projects h2 {
   text-align: center;
   padding: 1rem;
 }
 
 .project-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  justify-items: center;
 }
 
-.project-container img {
-  max-width: 350px;
+.project-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.project1,
+.project2 {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.project-border {
+  border: 2px solid #0f0c29;
+  max-width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .project-container li {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-photo {
+    max-width: 100%;
+  }
 }
