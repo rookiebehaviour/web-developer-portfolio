@@ -10,7 +10,7 @@ body {
 
 main h1 {
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 main h2 {
@@ -22,15 +22,24 @@ main p {
 }
 
 nav {
-  height: 3rem;
-  margin-bottom: 2rem;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
-ul {
+nav ul {
   background: transparent;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 li {
@@ -38,9 +47,10 @@ li {
   padding: 1rem;
 }
 
-a {
+button a {
   color: white;
   text-decoration: none;
+  padding: 1rem 2rem;
 }
 
 main,
@@ -48,15 +58,15 @@ main,
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
-    #24243e,
-    #302b63,
-    #0f0c29
+    #1a1a1b,
+    #353437,
+    #4f4e52
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to bottom,
-    #24243e,
-    #302b63,
-    #0f0c29
+    #1a1a1b,
+    #353437,
+    #4f4e52
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: white;
@@ -76,9 +86,90 @@ section {
   padding: 1rem;
 }
 
-button {
+/*button {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(
+    to bottom,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); 
+  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
   padding: 1rem 2rem;
   border-radius: 5px;
+  border: 2px solid #d3d3d3;
+  box-shadow: 2px 4px 4px rgba(255, 255, 255, 0.5);
+  transition: all 150ms ease-in-out;
+}
+
+button:hover {
+  background: #302b63;
+}
+*/
+.btn {
+  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+  color: #222;
+  border: none;
+  outline: none;
+  position: relative;
+  padding: 1rem 2rem;
+  cursor: pointer;
+
+  --background-color: transparent;
+  --border-size: 3px;
+  --accent-color: #0af;
+  --red-gradient: radial-gradient(
+    circle at 50.4% 50.5%,
+    rgb(251, 32, 86) 0%,
+    rgb(135, 2, 35) 90%
+  );
+}
+
+.btn.btn-background-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--red-gradient);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-in-out;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: white;
+}
+
+.button-container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons button {
+  width: 100%;
 }
 
 #about,
@@ -116,20 +207,12 @@ button {
   filter: drop-shadow(5px 5px 5px);
 }
 
-.button-container {
-  width: 100%;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .about-me {
   display: flex;
   flex-wrap: wrap;
-  padding: 2rem;
   gap: 2rem;
   align-items: center;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .about-me p {
@@ -139,13 +222,11 @@ button {
 
 .projects {
   max-width: 100%;
-
   gap: 1rem;
 }
 
 .projects h2 {
   text-align: center;
-  padding: 1rem;
 }
 
 .project-container {
@@ -155,6 +236,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .project-image {
@@ -165,20 +247,14 @@ button {
 }
 
 .project-image img {
-  max-width: 100%;
-  height: auto;
+  max-width: 500px;
+  max-height: 250px;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
 
-.project1,
-.project2 {
-  max-width: 100%;
-  margin-bottom: 2rem;
-}
-
 .project-border {
-  border: 2px solid #0f0c29;
+  border: 1px solid #0f0c29;
   max-width: 100%;
   border-radius: 8px;
   text-align: center;
@@ -187,14 +263,67 @@ button {
   justify-content: center;
 }
 
+.socials {
+  padding-top: 2rem;
+  max-width: 600px;
+  font-size: 2rem;
+}
+
 @media (max-width: 1000px) {
   .project-container li {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 600px) {
+  main h1 {
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem 0;
+  }
+
+  main button {
+    margin: 0;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
+
+  main p {
+    font-size: 12rem;
+  }
+
+  .intro {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .button-container {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .buttons {
+    display: block;
+  }
+
   .profile-photo {
     max-width: 100%;
+  }
+
+  .project-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projects h2 {
+    text-align: left;
+  }
+
+  .socials {
+    max-width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
   }
 }
