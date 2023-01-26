@@ -54,7 +54,8 @@ button a {
 }
 
 main,
-#projects {
+#projects,
+#contact {
   background: #0f0c29; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to bottom,
@@ -86,6 +87,27 @@ section {
   padding: 1rem;
 }
 
+footer {
+  background: #000000;
+  color: white;
+  padding: 2rem 4rem;
+}
+
+footer h5 {
+  color: red;
+}
+
+footer li {
+  padding-left: 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
 /*button {
   background: #0f0c29;
   background: -webkit-linear-gradient(
@@ -115,9 +137,6 @@ button:hover {
   padding: 1rem 2rem;
   cursor: pointer;
 
-  --background-color: transparent;
-  --border-size: 3px;
-  --accent-color: #0af;
   --red-gradient: radial-gradient(
     circle at 50.4% 50.5%,
     rgb(251, 32, 86) 0%,
@@ -138,20 +157,24 @@ button:hover {
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 300ms ease-in-out;
+  border-radius: 8px;
 }
 
 .btn.btn-background-slide:hover::before,
 .btn.btn-background-slide:focus::before {
+  border-radius: 8px;
   transform: scaleX(1);
 }
 
 .btn.btn-background-slide {
+  border-radius: 8px;
   transition: color 300ms ease-in-out;
   z-index: 1;
 }
 
 .btn.btn-background-slide:hover,
 .btn.btn-background-slide:focus {
+  border-radius: 8px;
   color: white;
 }
 
@@ -173,7 +196,7 @@ button:hover {
 }
 
 #about,
-#contact {
+.other-projects {
   background: #536976; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #292e49, #536976);
   background: linear-gradient(to bottom, #292e49, #536976);
@@ -222,7 +245,6 @@ button:hover {
 
 .projects {
   max-width: 100%;
-  gap: 1rem;
 }
 
 .projects h2 {
@@ -235,8 +257,8 @@ button:hover {
   max-width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .project-image {
@@ -254,7 +276,6 @@ button:hover {
 }
 
 .project-border {
-  border: 1px solid #0f0c29;
   max-width: 100%;
   border-radius: 8px;
   text-align: center;
@@ -293,6 +314,10 @@ button:hover {
     font-size: 12rem;
   }
 
+  footer {
+    padding: 1rem;
+  }
+
   .intro {
     gap: 1rem;
     padding: 1rem;
@@ -325,5 +350,10 @@ button:hover {
     max-width: 100%;
     padding: 2rem;
     font-size: 1.5rem;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
