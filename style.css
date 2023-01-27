@@ -93,7 +93,9 @@ section {
 }
 
 footer {
-  background: #000000;
+  background: #536976;
+  background: -webkit-linear-gradient(to bottom, #292e49, #536976);
+  background: linear-gradient(to bottom, #292e49, #536976);
   color: white;
   padding: 2rem 4rem;
 }
@@ -274,18 +276,17 @@ footer li p {
   text-align: center;
 }
 
+.project-card {
+  max-width: 500px;
+}
+
 .project-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-  align-items: center;
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-}
-
-.project-card {
-  width: 525px;
 }
 
 .project-image {
@@ -296,7 +297,7 @@ footer li p {
 }
 
 .project-image img {
-  max-width: 500px;
+  max-width: 475px;
   max-height: 225px;
   margin-bottom: 1rem;
   border-radius: 5px;
@@ -316,6 +317,13 @@ footer li p {
   padding-bottom: 2rem;
 }
 
+#contact {
+  background-image: url("/images/my-head-transparent.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .socials {
   padding-top: 2rem;
   max-width: 600px;
@@ -323,13 +331,7 @@ footer li p {
 }
 
 .goodbye {
-  width: 450px;
-}
-
-@media (max-width: 1000px) {
-  .project-container li {
-    font-size: 1rem;
-  }
+  max-width: 450px;
 }
 
 @media (max-width: 600px) {
