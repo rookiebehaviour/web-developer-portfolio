@@ -47,8 +47,13 @@ li {
   padding: 1rem;
 }
 
+button {
+  margin: 0.5rem 0;
+}
+
 button a {
   color: white;
+  font-size: 1rem;
   text-decoration: none;
   padding: 1rem 2rem;
 }
@@ -94,11 +99,15 @@ footer {
 }
 
 footer h5 {
-  color: red;
+  color: white;
 }
 
 footer li {
   padding-left: 0;
+}
+
+footer li p {
+  line-height: 2;
 }
 
 .footer {
@@ -129,7 +138,11 @@ button:hover {
 }
 */
 .btn {
-  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
   color: #222;
   border: none;
   outline: none;
@@ -141,6 +154,23 @@ button:hover {
     circle at 50.4% 50.5%,
     rgb(251, 32, 86) 0%,
     rgb(135, 2, 35) 90%
+  );
+
+  background: rgb(83, 105, 118);
+  background: -moz-linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
+  background: -webkit-linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
+  background: linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
   );
 }
 
@@ -197,7 +227,7 @@ button:hover {
 
 #about,
 .other-projects {
-  background: #536976; /* fallback for old browsers */
+  background: #536976;
   background: -webkit-linear-gradient(to bottom, #292e49, #536976);
   background: linear-gradient(to bottom, #292e49, #536976);
   color: white;
@@ -208,6 +238,15 @@ button:hover {
 
 .container {
   max-width: 100%;
+}
+
+.contact-container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .intro {
@@ -282,6 +321,7 @@ button:hover {
   padding: 1rem;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .socials {
@@ -346,10 +386,20 @@ button:hover {
     text-align: left;
   }
 
+  .contact {
+    font-size: 1rem;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .contact h2 {
+    text-align: left;
+  }
+
   .socials {
     max-width: 100%;
-    padding: 2rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
   }
 
   .footer {
