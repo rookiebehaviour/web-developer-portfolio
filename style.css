@@ -61,19 +61,9 @@ button a {
 main,
 #projects,
 #contact {
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #1a1a1b,
-    #353437,
-    #4f4e52
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #1a1a1b,
-    #353437,
-    #4f4e52
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
+  background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
 
   color: white;
 
@@ -93,9 +83,9 @@ section {
 }
 
 footer {
-  background: #536976;
-  background: -webkit-linear-gradient(to bottom, #292e49, #536976);
-  background: linear-gradient(to bottom, #292e49, #536976);
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
+  background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
   color: white;
   padding: 2rem 4rem;
 }
@@ -111,6 +101,10 @@ footer li {
 
 footer li p {
   line-height: 2;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer {
@@ -233,6 +227,8 @@ footer li p {
   gap: 3rem;
   line-height: 2;
   letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
 }
 
 .intro {
@@ -270,10 +266,6 @@ footer li p {
 
 .projects {
   max-width: 100%;
-}
-
-.projects h2 {
-  text-align: center;
 }
 
 .project-card {
@@ -318,10 +310,15 @@ footer li p {
 }
 
 #contact {
-  background-image: url("/images/my-head-transparent.png");
+  background-image: url("/images/me-no-bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9;
+}
+
+#contact h2 {
+  color: black;
 }
 
 .socials {
