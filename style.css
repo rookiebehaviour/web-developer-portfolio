@@ -100,6 +100,7 @@ footer {
 
 footer h5 {
   color: white;
+  font-size: 1.25rem;
 }
 
 footer li {
@@ -117,26 +118,6 @@ footer li p {
   padding: 2rem;
 }
 
-/*button {
-  background: #0f0c29;
-  background: -webkit-linear-gradient(
-    to bottom,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); 
-  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  border: 2px solid #d3d3d3;
-  box-shadow: 2px 4px 4px rgba(255, 255, 255, 0.5);
-  transition: all 150ms ease-in-out;
-}
-
-button:hover {
-  background: #302b63;
-}
-*/
 .btn {
   background: linear-gradient(
     16deg,
@@ -241,12 +222,15 @@ button:hover {
 }
 
 .contact-container {
-  width: 100%;
   min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
+  align-items: center;
   justify-content: center;
+  gap: 3rem;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
 .intro {
@@ -309,7 +293,7 @@ button:hover {
 
 .project-image img {
   max-width: 500px;
-  max-height: 250px;
+  max-height: 225px;
   margin-bottom: 1rem;
   border-radius: 5px;
 }
@@ -327,7 +311,11 @@ button:hover {
 .socials {
   padding-top: 2rem;
   max-width: 600px;
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.goodbye {
+  width: 450px;
 }
 
 @media (max-width: 1000px) {
@@ -384,12 +372,6 @@ button:hover {
 
   .projects h2 {
     text-align: left;
-  }
-
-  .contact {
-    font-size: 1rem;
-    line-height: 2;
-    text-align: center;
   }
 
   .contact h2 {
