@@ -284,6 +284,10 @@ footer li p {
   margin-top: 2rem;
 }
 
+.project-card {
+  width: 525px;
+}
+
 .project-image {
   width: 100%;
   display: flex;
@@ -306,6 +310,10 @@ footer li p {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.1);
+}
+
+.other-projects {
+  padding-bottom: 2rem;
 }
 
 .socials {
