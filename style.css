@@ -96,7 +96,7 @@ footer h5 {
 }
 
 footer li {
-  padding-left: 0;
+  padding: 10px 0 0 0;
 }
 
 footer li p {
