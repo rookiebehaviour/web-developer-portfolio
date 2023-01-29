@@ -46,5 +46,3 @@ const handleSubmit = (event) => {
 };
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
-
-// Hnadle callback token - Google recaptcha
