@@ -1,30 +1,23 @@
 //Smooth Scroll
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+const debounce = (func, wait = 50) => {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(func, wait, ...arguments);
+  };
+};
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-function scrollTo(element) {
-  window.scroll({
-    behavior: "smooth",
-    left: 0,
-    top: element.offsetTop,
-  });
-}
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     const href = this.getAttribute("href");
     const element = document.querySelector(href);
-    setTimeout(() => scrollTo(element), 3000);
+    element.scrollIntoView({
+      behavior: "smooth",
+      duration: 2000,
+    });
   });
 });
 
@@ -54,13 +47,15 @@ async function handleSubmit(event) {
               .map((error) => error["message"])
               .join(", ");
           } else {
-            status.innerText = "Oops! There was a problem sending your message";
+            status.innerText =
+              "Oops! There was a problem sending your message, please retry.";
           }
         });
       }
     })
     .catch((error) => {
-      status.innerText = "Oops! There was a problem sending your message";
+      status.innerText =
+        "Oops! There was a problem sending your message, please retry.";
     });
 }
 form.addEventListener("submit", handleSubmit);
