@@ -8,6 +8,28 @@ body {
   font-family: "Fira Code", monospace;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: radial-gradient(
+    circle at 50.4% 50.5%,
+    rgb(251, 32, 86) 0%,
+    rgb(135, 2, 35) 90%
+  );
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 65%
+  );
+  color: #222;
+  border-radius: 5px;
+}
+
 main h1 {
   font-size: 3rem;
   margin: 2rem 0;
