@@ -1,3 +1,11 @@
+:root {
+  --red-gradient: radial-gradient(
+    circle at 50.4% 50.5%,
+    rgb(251, 32, 86) 0%,
+    rgb(135, 2, 35) 90%
+  );
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,16 +39,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 main h1 {
-  font-size: 3rem;
-  margin: 2rem 0;
+  font-size: 48px;
+  margin: 3rem 0 2rem 0;
 }
 
 main h2 {
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 main p {
-  font-size: 15rem;
+  font-size: 240px;
 }
 
 nav {
@@ -62,6 +70,13 @@ nav ul {
 a {
   text-decoration: none;
   color: white;
+}
+
+nav a:hover {
+  background: var(--red-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 li {
