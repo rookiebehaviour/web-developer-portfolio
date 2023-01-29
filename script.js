@@ -28,38 +28,39 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Form Submissions - Netlify
+// Form submission - Formspree
 
-const handleSubmit = (event) => {
+var form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
   event.preventDefault();
-
-  const myForm = event.target;
-  const formData = new FormData(myForm);
-
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+  var status = document.getElementById("contact-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
   })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
-
-document.querySelector("form").addEventListener("submit", handleSubmit);
-
-// Google captcha
-
-function onSubmit(token) {
-  document.getElementById("contact-form").submit();
+    .then((response) => {
+      if (response.ok) {
+        status.innerText = "Your message is on it's way to Jacqueline!";
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            status.innerText = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            status.innerText = "Oops! There was a problem sending your message";
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      status.innerText = "Oops! There was a problem sending your message";
+    });
 }
-
-exports.handler = async function (event, context) {
-  const value = process.env.SITE_KEY;
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: `Value of MY_IMPORTANT_VARIABLE is ${value}.`,
-    }),
-  };
-};
+form.addEventListener("submit", handleSubmit);
