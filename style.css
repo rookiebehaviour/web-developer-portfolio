@@ -234,8 +234,7 @@ footer a:hover {
 .intro {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
