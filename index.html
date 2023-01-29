@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jacqueline Mason | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
+    <script src="script.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/d5fe845896.js"
       crossorigin="anonymous"
@@ -479,15 +485,34 @@
               ><i class="fa-solid fa-envelope"></i
             ></a>
           </div>
-          <div class="goodbye">
-            <p>
-              Hi, thank you for visiting my portfolio! I made a conscience
-              decision to build this portfolio without any frameworks or
-              frontend libraries. I wanted you to see my abilities to create in
-              it's raw form. My projects may use frameworks and such but my
-              portfolio will only contain Google Fonts and Font Awesome icons.
-              So I hope I didn't disappoint! - J.M.
-            </p>
+          <div class="say-hello">
+            <form
+              id="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button
+                  class=".btn .btn.btn-background-slide g-recaptcha"
+                  data-sitekey="reCAPTCHA_site_key"
+                  data-callback="onSubmit"
+                  data-action="submit"
+                  type="submit"
+                >
+                  Send
+                </button>
+              </p>
+            </form>
           </div>
         </div>
       </section>
