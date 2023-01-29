@@ -46,3 +46,9 @@ const handleSubmit = (event) => {
 };
 
 document.querySelector("form").addEventListener("submit", handleSubmit);
+
+// Google captcha
+
+function onSubmit(token) {
+  document.getElementById("contact-form").submit();
+}
