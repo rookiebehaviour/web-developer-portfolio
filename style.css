@@ -35,7 +35,8 @@ body::-webkit-scrollbar-thumb {
     rgba(41, 46, 73, 1) 65%
   );
   color: #222;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 main h1 {
