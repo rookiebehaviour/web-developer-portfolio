@@ -91,7 +91,8 @@ button {
   margin: 0.5rem 0;
 }
 
-button a {
+button a,
+form button {
   color: white;
   font-size: 1rem;
   text-decoration: none;
@@ -104,9 +105,7 @@ main,
   background: #0f0c29;
   background: -webkit-linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
   background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
-
   color: white;
-
   max-width: 100%;
   padding: 1rem;
   min-height: 100vh;
@@ -160,7 +159,7 @@ footer a:hover {
     rgba(83, 105, 118, 1) 0%,
     rgba(41, 46, 73, 1) 35%
   );
-  color: #222;
+  color: white;
   border: none;
   outline: none;
   position: relative;
@@ -353,7 +352,6 @@ footer a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.9;
 }
 
 #contact h2 {
@@ -373,6 +371,17 @@ footer a:hover {
 form input,
 form textarea {
   width: 100%;
+  padding: 5px;
+}
+
+form input {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+form textarea {
+  font-size: 18px;
+  min-height: 60px;
 }
 
 @media (max-width: 600px) {
