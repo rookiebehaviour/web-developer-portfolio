@@ -516,17 +516,17 @@
                   <textarea id="message" name="message" required></textarea>
                 </label>
               </p>
-              <div id="form-captcha"></div>
-              <br />
-              <button
-                class="btn btn-background-slide g-recaptcha"
+              <div
+                id="form-captcha"
+                class="g-recaptcha"
                 data-sitekey="6Lc21zgkAAAAAPEbLXup1uOjKXU32Lz_xgvRe0vL"
                 data-callback="onSubmit"
                 data-action="submit"
                 data-theme="dark"
                 data-size="compact"
-                type="submit"
-              >
+              ></div>
+
+              <button class="btn btn-background-slide" type="submit">
                 Send
               </button>
               <br />
