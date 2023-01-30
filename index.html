@@ -10,6 +10,7 @@
       var onloadCallback = function () {
         grecaptcha.render("form-captcha", {
           sitekey: "6Lc21zgkAAAAAPEbLXup1uOjKXU32Lz_xgvRe0vL",
+          theme: "dark",
         });
       };
     </script>
@@ -515,18 +516,21 @@
                   <textarea id="message" name="message" required></textarea>
                 </label>
               </p>
-
+              <div id="form-captcha"></div>
+              <br />
               <button
                 class="btn btn-background-slide g-recaptcha"
-                data-sitekey="6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z"
+                data-sitekey="6Lc21zgkAAAAAPEbLXup1uOjKXU32Lz_xgvRe0vL"
                 data-callback="onSubmit"
                 data-action="submit"
+                data-theme="dark"
+                data-size="compact"
                 type="submit"
               >
                 Send
               </button>
               <br />
-              <div id="form-captcha"></div>
+
               <p id="contact-form-status"></p>
             </form>
           </div>
