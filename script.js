@@ -38,7 +38,7 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.innerText = "Your message is on it's way to Jacqueline!";
+        status.innerText = "Thanks for your submission!";
         form.reset();
       } else {
         response.json().then((data) => {
@@ -47,28 +47,13 @@ async function handleSubmit(event) {
               .map((error) => error["message"])
               .join(", ");
           } else {
-            status.innerText =
-              "Oops! There was a problem sending your message, please retry.";
+            status.innerText = "Oops! There was a problem submitting your form";
           }
         });
       }
     })
     .catch((error) => {
-      status.innerText =
-        "Oops! There was a problem sending your message, please retry.";
+      status.innerText = "Oops! There was a problem submitting your form";
     });
 }
 form.addEventListener("submit", handleSubmit);
-
-window.onbeforeunload = () => {
-  for (const form of document.getElementsByTagName("form")) {
-    form.reset();
-  }
-};
-
-window.onload = function () {
-  var el = document.getElementById("g-recaptcha-response");
-  if (el) {
-    el.setAttribute("required", "required");
-  }
-};

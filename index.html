@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jacqueline Mason | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
+    <script type="text/javascript">
+      var onloadCallback = function () {
+        grecaptcha.render("form-captcha", {
+          sitekey: "6Lc21zgkAAAAAPEbLXup1uOjKXU32Lz_xgvRe0vL",
+        });
+      };
     </script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
     <script src="script.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/d5fe845896.js"
@@ -520,13 +526,7 @@
                 Send
               </button>
               <br />
-              <small>
-                This site is protected by reCAPTCHA and the Google
-                <a href="https://policies.google.com/privacy">Privacy Policy</a>
-                and
-                <a href="https://policies.google.com/terms">Terms of Service</a>
-                apply.
-              </small>
+              <div id="form-captcha"></div>
               <p id="contact-form-status"></p>
             </form>
           </div>
