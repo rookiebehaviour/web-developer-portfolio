@@ -371,7 +371,7 @@ footer a:hover {
 form input,
 form textarea {
   width: 100%;
-  padding: 5px;
+  padding: 3px 5px;
 }
 
 form input {
@@ -379,9 +379,22 @@ form input {
   line-height: 1.5;
 }
 
+form button {
+  width: 100%;
+}
+
 form textarea {
   font-size: 18px;
   min-height: 60px;
+}
+
+form a,
+footer a {
+  text-decoration: underline;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {

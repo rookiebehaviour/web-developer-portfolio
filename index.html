@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jacqueline Mason | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
     <script src="script.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/d5fe845896.js"
@@ -503,11 +509,24 @@
                   <textarea id="message" name="message" required></textarea>
                 </label>
               </p>
-              <div class="buttons">
-                <button class="btn btn-background-slide" type="submit">
-                  Send
-                </button>
-              </div>
+
+              <button
+                class="btn btn-background-slide g-recaptcha"
+                data-sitekey="6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z"
+                data-callback="onSubmit"
+                data-action="submit"
+                type="submit"
+              >
+                Send
+              </button>
+              <br />
+              <small>
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>
+                and
+                <a href="https://policies.google.com/terms">Terms of Service</a>
+                apply.
+              </small>
               <p id="contact-form-status"></p>
             </form>
           </div>
