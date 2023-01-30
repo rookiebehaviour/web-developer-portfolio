@@ -23,12 +23,13 @@ document.querySelectorAll("a[href^='#']").forEach((anchor) => {
 
 // Form submission - Formspree
 
-var form = document.getElementById("contact-form");
+let form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
-  var status = document.getElementById("contact-form-status");
-  var data = new FormData(event.target);
+  let name = event.target.name.value;
+  let status = document.getElementById("contact-form-status");
+  let data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -38,7 +39,7 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.innerText = "Thanks, your message was sent to Jacqueline!";
+        status.innerText = `Thanks ${name}, your message was sent to Jacqueline!`;
         form.reset();
       } else {
         response.json().then((data) => {
