@@ -11,28 +11,8 @@
       function onSubmit(token) {
         document.getElementById("contact-form").submit();
       }
-
-      var onloadCallback = function () {
-        grecaptcha.render("submit", {
-          sitekey: "6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z",
-          callback: onSubmit,
-        });
-      };
-
-      function validate(event) {
-        event.preventDefault();
-        if (!document.getElementById("email").value) {
-          alert("You must add text to the required field");
-        } else {
-          grecaptcha.execute();
-        }
-      }
-
-      function onload() {
-        var element = document.getElementById("submit");
-        element.onclick = validate;
-      }
     </script>
+
     <script src="script.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/d5fe845896.js"
@@ -530,19 +510,13 @@
                   <textarea id="message" name="message" required></textarea>
                 </label>
               </p>
-              <div
-                id="form-captcha"
-                class="g-recaptcha"
+              <button
+                id="submit"
+                class="btn btn-background-slide g-recaptcha"
+                type="submit"
                 data-sitekey="6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z"
                 data-callback="onSubmit"
                 data-size="invisible"
-              ></div>
-
-              <button
-                id="submit"
-                class="btn btn-background-slide"
-                type="submit"
-                value="submit"
               >
                 Send
               </button>
@@ -605,9 +579,6 @@
             </li>
           </ul>
         </div>
-        <script>
-          onload();
-        </script>
       </footer>
     </div>
   </body>
