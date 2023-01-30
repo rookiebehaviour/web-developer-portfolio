@@ -12,9 +12,16 @@
         document.getElementById("contact-form").submit();
       }
 
-      function onSubmit(token) {
-        alert("thanks " + document.getElementById("field").value);
-      }
+      var onSubmit = function (token) {
+        console.log("success!");
+      };
+
+      var onloadCallback = function () {
+        grecaptcha.render("submit", {
+          sitekey: "6Lc21zgkAAAAAPEbLXup1uOjKXU32Lz_xgvRe0vL",
+          callback: onSubmit,
+        });
+      };
 
       function validate(event) {
         event.preventDefault();
