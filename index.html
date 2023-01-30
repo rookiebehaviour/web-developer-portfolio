@@ -509,13 +509,15 @@
                   <textarea id="message" name="message" required></textarea>
                 </label>
               </p>
-              <button
-                class="btn btn-background-slide g-recaptcha"
-                type="submit"
+              <div
+                id="form-captcha"
+                class="g-recaptcha"
                 data-sitekey="6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z"
                 data-callback="onSubmit"
                 data-size="invisible"
-              >
+              ></div>
+
+              <button class="btn btn-background-slide" type="submit">
                 Send
               </button>
               <br />
