@@ -370,8 +370,10 @@ footer a:hover {
 
 form input,
 form textarea {
+  outline: none;
   width: 100%;
   padding: 3px 5px;
+  border-radius: 8px;
 }
 
 form input {
