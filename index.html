@@ -12,10 +12,6 @@
         document.getElementById("contact-form").submit();
       }
 
-      var onSubmit = function (token) {
-        console.log("success!");
-      };
-
       var onloadCallback = function () {
         grecaptcha.render("submit", {
           sitekey: "6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z",
@@ -25,7 +21,7 @@
 
       function validate(event) {
         event.preventDefault();
-        if (!document.getElementById("field").value) {
+        if (!document.getElementById("email").value) {
           alert("You must add text to the required field");
         } else {
           grecaptcha.execute();
