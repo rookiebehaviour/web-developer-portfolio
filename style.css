@@ -69,8 +69,8 @@ nav ul {
 }
 
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: dotted;
 }
 
 nav a:hover,
@@ -80,6 +80,7 @@ footer a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border-bottom: 2px dotted white;
 }
 
 li {
@@ -107,8 +108,15 @@ main,
   background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
   color: white;
   max-width: 100%;
-  padding: 1rem;
+}
+
+#projects,
+#contact {
   min-height: 100vh;
+}
+
+main {
+  height: 100vh;
 }
 
 main a {
@@ -142,10 +150,6 @@ footer li p {
   line-height: 2;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -165,6 +169,7 @@ footer a:hover {
   position: relative;
   padding: 1rem 2rem;
   cursor: pointer;
+  border-bottom: 2px dotted white;
 
   --red-gradient: radial-gradient(
     circle at 50.4% 50.5%,
@@ -376,7 +381,7 @@ form textarea {
   background: transparent;
   caret-color: white;
   color: white;
-  border: 2px solid white;
+  border: 2px dotted white;
 }
 
 form input {
@@ -395,7 +400,7 @@ form textarea {
 
 #contact a,
 footer a {
-  text-decoration: underline;
+  text-decoration: dotted underline;
 }
 
 .grecaptcha-badge {
