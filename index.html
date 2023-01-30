@@ -7,7 +7,11 @@
     <title>Jacqueline Mason | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
     <script src="script.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/d5fe845896.js"
@@ -576,43 +580,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      var form = document.getElementById("contact-form");
-
-      async function handleSubmit(event) {
-        event.preventDefault();
-        var status = document.getElementById("contact-form-status");
-        var data = new FormData(event.target);
-        fetch(event.target.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            Accept: "application/json",
-          },
-        })
-          .then((response) => {
-            if (response.ok) {
-              status.innerText = "Your message is on it's way to Jacqueline!";
-              form.reset();
-            } else {
-              response.json().then((data) => {
-                if (Object.hasOwn(data, "errors")) {
-                  status.innerText = data["errors"]
-                    .map((error) => error["message"])
-                    .join(", ");
-                } else {
-                  status.innerText =
-                    "Oops! There was a problem sending your message, please retry.";
-                }
-              });
-            }
-          })
-          .catch((error) => {
-            status.innerText =
-              "Oops! There was a problem sending your message, please retry.";
-          });
-      }
-      form.addEventListener("submit", handleSubmit);
-    </script>
   </body>
 </html>
