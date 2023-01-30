@@ -390,9 +390,13 @@ form textarea {
   min-height: 60px;
 }
 
-form a,
+#contact a,
 footer a {
   text-decoration: underline;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {
