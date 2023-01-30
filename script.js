@@ -38,7 +38,7 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       if (response.ok) {
-        status.innerText = "Thanks for your submission!";
+        status.innerText = "Thanks, your message was sent to Jacqueline!";
         form.reset();
       } else {
         response.json().then((data) => {
@@ -47,13 +47,15 @@ async function handleSubmit(event) {
               .map((error) => error["message"])
               .join(", ");
           } else {
-            status.innerText = "Oops! There was a problem submitting your form";
+            status.innerText =
+              "Oops! There was a problem submitting your message, please retry.";
           }
         });
       }
     })
     .catch((error) => {
-      status.innerText = "Oops! There was a problem submitting your form";
+      status.innerText =
+        "Oops! There was a problem submitting your message, please retry.";
     });
 }
 form.addEventListener("submit", handleSubmit);
