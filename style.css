@@ -35,8 +35,8 @@ body::-webkit-scrollbar-thumb {
     rgba(83, 105, 118, 1) 0%,
     rgba(41, 46, 73, 1) 65%
   );
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
+  border: 2px dotted white;
 }
 
 main h1 {
@@ -92,7 +92,7 @@ button {
   margin: 0.5rem 0;
 }
 
-button a,
+a button,
 form button {
   color: white;
   font-size: 1rem;
@@ -229,9 +229,9 @@ footer li p {
   color: white;
 }
 
-.button-container {
+.button-container button {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,6 +240,8 @@ footer li p {
 .buttons {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons button {
