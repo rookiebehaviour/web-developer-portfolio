@@ -1,4 +1,4 @@
-/* Root Element CSS */
+/* Root & high hierchy elements */
 
 :root {
   --red-gradient: radial-gradient(
@@ -41,6 +41,17 @@ body::-webkit-scrollbar-thumb {
   border: 2px dotted white;
 }
 
+section {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+  border-top: 3px dotted white;
+}
+
+.container {
+  max-width: 100%;
+}
+
 /* Navagation and Anchor Links */
 
 nav {
@@ -80,13 +91,7 @@ footer a:hover {
   border-bottom: 2px dotted white;
 }
 
-a button,
-form button {
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 1rem 2rem;
-}
+/* Multiple Sections */
 
 main,
 #projects,
@@ -108,17 +113,6 @@ main,
   max-width: 100%;
   padding: 1rem;
   min-height: 100vh;
-}
-
-section {
-  min-height: 100vh;
-  max-width: 100%;
-  padding: 1rem;
-  border-top: 3px dotted white;
-}
-
-.container {
-  max-width: 100%;
 }
 
 /* Main Home Page */
@@ -171,6 +165,14 @@ main a button {
 }
 
 /* Button Elements */
+
+a button,
+form button {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
 
 .btn {
   background: linear-gradient(
