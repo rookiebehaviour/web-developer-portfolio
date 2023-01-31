@@ -117,6 +117,15 @@ main,
 
 /* Main Home Page */
 
+main {
+  background-color: #0f0c29;
+  background-image: url("/images/programmer-silhouette.png"),
+    linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
 main h1 {
   font-size: 50px;
   margin: 3rem 0 2rem 0;
@@ -138,7 +147,7 @@ main a button {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  gap: 5rem;
+  gap: 8rem;
   padding: 3rem;
   align-items: center;
   justify-content: center;
@@ -150,7 +159,8 @@ main a button {
 
 .header-image {
   max-width: 20rem;
-  filter: drop-shadow(5px 5px 5px);
+  box-shadow: 3px 4px 4px 6px white;
+  border-radius: 8px;
 }
 
 .title {
