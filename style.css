@@ -76,8 +76,7 @@ a {
 
 nav a:hover,
 #contact a:hover,
-footer a:hover,
-main h1:hover {
+footer a:hover {
   background: var(--red-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -301,7 +300,6 @@ footer li p {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-decoration: none;
 }
 
 .profile-photo {
