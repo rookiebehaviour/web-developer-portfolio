@@ -71,6 +71,10 @@ nav ul {
   font-size: 30px;
 }
 
+nav ul li {
+  filter: drop-shadow(2px 2px 3px black);
+}
+
 li {
   list-style: none;
   padding: 1rem;
@@ -147,10 +151,10 @@ main a button {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  gap: 8rem;
+  gap: 3rem;
   padding: 3rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .header-image-container {
