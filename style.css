@@ -40,16 +40,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 main h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin: 3rem 0 2rem 0;
 }
 
 main h2 {
-  font-size: 32px;
+  font-size: 42px;
 }
 
-main p {
-  font-size: 240px;
+main h3 {
+  font-size: 28px;
 }
 
 nav {
@@ -66,6 +66,7 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-size: 30px;
 }
 
 a {
@@ -108,18 +109,10 @@ main,
   background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
   color: white;
   max-width: 100%;
-}
-
-#projects,
-#contact {
   min-height: 100vh;
 }
 
-main {
-  height: 100vh;
-}
-
-main a {
+main a button {
   font-size: 1.5rem;
 }
 
@@ -127,6 +120,7 @@ section {
   min-height: 100vh;
   max-width: 100%;
   padding: 1rem;
+  border-top: 3px dotted white;
 }
 
 footer {
@@ -135,6 +129,7 @@ footer {
   background: linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
   color: white;
   padding: 2rem 4rem;
+  border-top: 3px dotted white;
 }
 
 footer h5 {
@@ -281,12 +276,31 @@ footer li p {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
+  gap: 5rem;
+  padding: 3rem;
   align-items: center;
   justify-content: center;
 }
 
+.header-image-container {
+  max-width: 400px;
+}
+
+.header-image {
+  max-width: 20rem;
+  filter: drop-shadow(5px 5px 5px);
+}
+
 .title {
   text-align: center;
+}
+
+.title h1 {
+  background: var(--red-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: dotted underline white;
 }
 
 .profile-photo {
@@ -294,6 +308,7 @@ footer li p {
   max-width: 20rem;
   border-radius: 50%;
   filter: drop-shadow(5px 5px 5px);
+  border-bottom: 3px dotted white;
 }
 
 .about-me {
@@ -410,6 +425,10 @@ footer a {
 }
 
 @media (max-width: 600px) {
+  nav ul {
+    font-size: 22px;
+  }
+
   main h1 {
     font-size: 2.5rem;
     margin: 3rem 0 2rem 0;
@@ -421,10 +440,6 @@ footer a {
 
   main h2 {
     font-size: 1.5rem;
-  }
-
-  main p {
-    font-size: 12rem;
   }
 
   footer {
