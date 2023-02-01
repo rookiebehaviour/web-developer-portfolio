@@ -12,25 +12,18 @@ document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
-    document.querySelectorAll(".nav-item").forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    this.parentNode.classList.add("active");
-
     const href = this.getAttribute("href");
     const element = document.querySelector(href);
     element.scrollIntoView({
       behavior: "smooth",
       duration: 2000,
     });
-    history.pushState(null, null, this.getAttribute("href"));
+
+    if (href === "#home") {
+      history.replaceState({}, "", "/");
+    }
   });
 });
-
-if (window.location.hash) {
-  window.location.replace("/");
-}
 
 // Form submission - Formspree
 
