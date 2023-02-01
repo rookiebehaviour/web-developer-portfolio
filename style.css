@@ -85,6 +85,13 @@ a {
   text-decoration: dotted;
 }
 
+.nav-item.active {
+  background: var(--red-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 nav a:hover,
 #contact a:hover,
 footer a:hover {
