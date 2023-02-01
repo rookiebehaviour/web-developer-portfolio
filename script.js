@@ -1,13 +1,5 @@
 //Smooth Scroll
 
-const debounce = (func, wait = 50) => {
-  let timeout;
-  return function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(func, wait, ...arguments);
-  };
-};
-
 document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
