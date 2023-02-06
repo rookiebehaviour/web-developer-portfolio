@@ -16,6 +16,7 @@
 
 body {
   font-family: "Fira Code", monospace;
+  -webkit-font-smoothing: antialiased;
 }
 
 body::-webkit-scrollbar {
@@ -341,6 +342,11 @@ form button {
   max-height: 225px;
   margin-bottom: 1rem;
   border-radius: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.project-image img:hover {
+  transform: scale(1.1);
 }
 
 .project-border {
