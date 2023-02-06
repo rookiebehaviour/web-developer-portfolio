@@ -548,4 +548,8 @@ footer li p {
     padding: 0;
     padding-left: 1rem;
   }
+
+  .project-image img:hover {
+    transform: none;
+  }
 }
