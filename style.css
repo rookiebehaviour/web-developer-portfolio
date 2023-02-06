@@ -368,14 +368,18 @@ form button {
 /* Contact Page */
 
 #contact {
-  background-image: url("/images/me-no-bg.png");
+  background-image: url("/images/me-no-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: 2;
 }
 
 #contact h2 {
-  color: black;
+  color: white;
+  z-index: 2;
+  position: relative;
 }
 
 #contact a,
@@ -384,7 +388,7 @@ footer a {
 }
 
 .contact-container {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
@@ -394,7 +398,10 @@ footer a {
   line-height: 2;
   letter-spacing: 1px;
   background: rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .socials {
@@ -551,5 +558,9 @@ footer li p {
 
   .project-image img:hover {
     transform: none;
+  }
+
+  .contact-container {
+    gap: 0;
   }
 }
