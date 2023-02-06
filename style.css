@@ -377,7 +377,6 @@ form button {
 }
 
 #contact h2 {
-  color: white;
   z-index: 2;
   position: relative;
 }
@@ -397,7 +396,7 @@ footer a {
   gap: 3rem;
   line-height: 2;
   letter-spacing: 1px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   position: absolute;
   top: 0;
   left: 0;
