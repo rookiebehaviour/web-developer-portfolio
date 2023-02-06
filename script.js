@@ -55,5 +55,5 @@ document.addEventListener("DOMContentLoaded", function () {
           "Oops! There was a problem submitting your message, please retry.";
       });
   }
+  form.addEventListener("submit", handleSubmit);
 });
-form.addEventListener("submit", handleSubmit);
