@@ -49,6 +49,21 @@ section {
   border-top: 3px dotted white;
 }
 
+.dropdown-content {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.show {
+  max-height: 500px;
+}
+
+.content {
+  max-width: 800px;
+}
+
 .container {
   max-width: 100%;
 }
@@ -60,7 +75,7 @@ nav {
   height: auto;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 4;
 }
 
 nav ul {
@@ -197,75 +212,50 @@ form button {
 }
 
 .btn {
+  background: rgb(83, 105, 118);
   background: linear-gradient(
     16deg,
     rgba(83, 105, 118, 1) 0%,
     rgba(41, 46, 73, 1) 35%
   );
+
+  background: -moz-linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
+
+  background: -webkit-linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
+
+  background: linear-gradient(
+    16deg,
+    rgba(83, 105, 118, 1) 0%,
+    rgba(41, 46, 73, 1) 35%
+  );
+
   color: white;
   border: none;
   outline: none;
   position: relative;
   padding: 1rem 2rem;
   cursor: pointer;
+  border-radius: 8px;
   border-bottom: 2px dotted white;
+  transition: all 200ms ease-in-out;
 
   --red-gradient: radial-gradient(
     circle at 50.4% 50.5%,
     rgb(251, 32, 86) 0%,
     rgb(135, 2, 35) 90%
   );
-
-  background: rgb(83, 105, 118);
-  background: -moz-linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
-  background: -webkit-linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
-  background: linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
 }
 
-.btn.btn-background-slide::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+.btn:hover {
   background: var(--red-gradient);
-  transition: top, left, right, bottom, 100ms ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 300ms ease-in-out;
-  border-radius: 8px;
-}
-
-.btn.btn-background-slide:hover::before,
-.btn.btn-background-slide:focus::before {
-  border-radius: 8px;
-  transform: scaleX(1);
-}
-
-.btn.btn-background-slide {
-  border-radius: 8px;
-  transition: color 300ms ease-in-out;
-  z-index: 1;
-}
-
-.btn.btn-background-slide:hover,
-.btn.btn-background-slide:focus {
-  border-radius: 8px;
-  color: white;
 }
 
 .button-container button {
@@ -290,6 +280,18 @@ form button {
 
 /* About Page */
 
+#about p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+#about .content {
+  margin: 0 auto;
+}
+#about .content button {
+  margin: 2rem 0;
+}
+
 .profile-photo {
   padding: 1rem;
   max-width: 20rem;
@@ -306,11 +308,6 @@ form button {
   padding: 0 1rem 1rem 1rem;
 }
 
-.about-me p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
 /* Projects Page */
 
 .projects {
@@ -318,7 +315,7 @@ form button {
 }
 
 .project-card {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 .project-container {
@@ -330,7 +327,7 @@ form button {
   margin-top: 2rem;
 }
 
-.project-image {
+.project-image-container {
   width: 100%;
   display: flex;
   align-items: center;
@@ -386,13 +383,18 @@ footer a {
   text-decoration: dotted underline;
 }
 
+.center-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .contact-container {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 3rem;
   line-height: 2;
   letter-spacing: 1px;
@@ -404,9 +406,8 @@ footer a {
 }
 
 .socials {
-  padding-top: 2rem;
-  max-width: 600px;
-  font-size: 3rem;
+  max-width: 450px;
+  font-size: 2.5rem;
 }
 
 .say-hello {
@@ -510,6 +511,10 @@ footer li p {
     font-size: 16px;
   }
 
+  form {
+    margin-top: 2rem;
+  }
+
   .intro {
     gap: 1rem;
     padding: 1rem;
@@ -561,5 +566,9 @@ footer li p {
 
   .contact-container {
     gap: 0;
+  }
+
+  .reach-out {
+    display: none;
   }
 }

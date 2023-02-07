@@ -17,6 +17,25 @@ document.querySelectorAll("a[href^='#']").forEach((anchor) => {
   });
 });
 
+// Dropdown arrow
+
+const dropdownBtn = document.querySelector(".dropdown-btn");
+const dropdownContent = document.querySelector(".dropdown-content");
+
+dropdownBtn.addEventListener("click", function () {
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    dropdownBtn.innerText = "Show More";
+  } else {
+    dropdownContent.style.display = "block";
+    dropdownBtn.innerText = "Show Less";
+  }
+});
+
+dropdownBtn.addEventListener("click", function () {
+  dropdownContent.classList.toggle("show");
+});
+
 // Form submission - Formspree
 document.addEventListener("DOMContentLoaded", function () {
   let form = document.getElementById("contact-form");

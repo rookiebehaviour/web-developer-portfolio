@@ -64,7 +64,7 @@
 
           <div class="button-container">
             <a href="#projects">
-              <button class="btn btn-background-slide">View Projects</button>
+              <button class="btn">View Projects</button>
             </a>
           </div>
         </div>
@@ -85,6 +85,8 @@
             <i class="fa-solid fa-terminal"></i> PlayStation Gamer <br />
             <br />
           </p>
+        </div>
+        <div class="content">
           <p>
             <i class="fa-solid fa-quote-left" style="font-size: 35px"></i> My
             name is Jacqueline Mason. I'm a creative Junior Web Developer from
@@ -93,20 +95,25 @@
             as Rookie Behaviour, or simply... Rookie. No, it has nothing to do
             with my coding skills, but my gaming skills 😂.
           </p>
-
-          <p>
-            I started my coding journey in 2020 when I taught myself full-stack
-            Software Development with freeCodeCamp online. I recently graduated
-            from SheCodes where I received my Front-end Development
-            Certification. I ran my own VA business for almost a decade before
-            changing careers so I have a heart for small businesses along with
-            non-profits. My interests include: <br />
-            <br />
-            <i class="fa-solid fa-check"></i> Full-Stack Web Development
-            <i class="fa-solid fa-check"></i> Front-End
-            <i class="fa-solid fa-check"></i> Web Apps
-            <i class="fa-solid fa-check"></i> Responsive Web Design
-          </p>
+          <br /><br />
+          <div class="dropdown-content">
+            <p>
+              I started my coding journey in 2020 when I taught myself
+              full-stack Software Development with freeCodeCamp online. I
+              recently graduated from SheCodes where I received my Front-end
+              Development Certification. I ran my own VA business for almost a
+              decade before changing careers so I have a heart for small
+              businesses along with non-profits. My interests include: <br />
+              <br />
+              <i class="fa-solid fa-check"></i> Full-Stack Web Development
+              <i class="fa-solid fa-check"></i> Front-End
+              <i class="fa-solid fa-check"></i> Web Apps
+              <i class="fa-solid fa-check"></i> Responsive Web Design
+            </p>
+          </div>
+          <button class="show dropdown-btn btn btn-background-slide">
+            Show More
+          </button>
         </div>
       </section>
       <section id="projects" class="projects">
@@ -285,37 +292,6 @@
               </div>
             </div>
           </div>
-
-          <div class="project-card">
-            <div class="project-border">
-              <div class="project-image">
-                <img
-                  src="/images/Portfolio-website.png"
-                  alt="Portfolio website"
-                />
-              </div>
-              <h3>My Second Portfolio</h3>
-              <p>Tools & technologies used:</p>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> React</li>
-                <li><i class="fa-solid fa-check"></i> Bootstrap</li>
-                <li><i class="fa-solid fa-check"></i> Font Awesome</li>
-                <li><i class="fa-solid fa-check"></i> Google Fonts</li>
-              </ul>
-              <div class="buttons">
-                <a
-                  href="https://spiffy-youtiao-fb3118.netlify.app/"
-                  target="_blank"
-                  ><button class="btn btn-background-slide">Launch</button></a
-                >
-                <a
-                  href="https://github.com/rookiebehaviour/superb-portfolio-react"
-                  target="_blank"
-                  ><button class="btn btn-background-slide">Source</button></a
-                >
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <section class="other-projects">
@@ -407,33 +383,6 @@
       <section id="contact" class="contact">
         <h2>Contact</h2>
         <div class="contact-container">
-          <div class="socials">
-            <h4>Reach out</h4>
-            <a
-              href="https://www.linkedin.com/in/jacquelinesd/"
-              target="_blank"
-              title="Linkedin"
-              ><i class="fa-brands fa-linkedin"> </i
-            ></a>
-            <a
-              href="https://github.com/rookiebehaviour"
-              target="_blank"
-              title="Github"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://www.freecodecamp.org/jjmason"
-              target="_blank"
-              title="freeCodeCamp"
-              ><i class="fa-brands fa-free-code-camp"></i
-            ></a>
-            <a
-              href="https://jacqueline.hashnode.dev/"
-              target="_blank"
-              title="Jacqueline's Hashnode blog"
-              ><i class="fa-brands fa-hashnode"></i
-            ></a>
-          </div>
           <div class="say-hello">
             <form
               id="contact-form"
@@ -470,17 +419,49 @@
                 Send
               </button>
               <br />
+              <br />
 
               <p id="contact-form-status"></p>
             </form>
           </div>
-          <small
-            >This site is protected by reCAPTCHA and the Google
-            <a href="https://policies.google.com/privacy">Privacy Policy</a>
-            and
-            <a href="https://policies.google.com/terms">Terms of Service</a>
-            apply.</small
-          >
+          <br />
+
+          <div class="socials">
+            <h4 class="reach-out">Reach out</h4>
+            <a
+              href="https://www.linkedin.com/in/jacquelinesd/"
+              target="_blank"
+              title="Linkedin"
+              ><i class="fa-brands fa-linkedin"> </i
+            ></a>
+            <a
+              href="https://github.com/rookiebehaviour"
+              target="_blank"
+              title="Github"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.freecodecamp.org/jjmason"
+              target="_blank"
+              title="freeCodeCamp"
+              ><i class="fa-brands fa-free-code-camp"></i
+            ></a>
+            <a
+              href="https://jacqueline.hashnode.dev/"
+              target="_blank"
+              title="Jacqueline's Hashnode blog"
+              ><i class="fa-brands fa-hashnode"></i
+            ></a>
+          </div>
+          <div class="center-text">
+            <small
+              >This site is protected by reCAPTCHA and the Google
+              <a href="https://policies.google.com/privacy">Privacy Policy</a>
+              and
+              <a href="https://policies.google.com/terms">Terms of Service</a>
+              apply.</small
+            >
+          </div>
         </div>
       </section>
 
