@@ -242,6 +242,7 @@ form button {
   outline: none;
   position: relative;
   padding: 1rem 2rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   border-radius: 8px;
   border-bottom: 2px dotted white;
@@ -281,9 +282,6 @@ form button {
 
 #about .content {
   margin: 0 auto;
-}
-#about .content button {
-  margin: 2rem 0;
 }
 
 .profile-photo {
@@ -383,12 +381,13 @@ footer a {
 }
 
 .contact-container {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 3rem;
   line-height: 2;
   letter-spacing: 1px;
