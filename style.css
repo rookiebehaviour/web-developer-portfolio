@@ -469,10 +469,6 @@ footer li p {
 
 /* Google Captcha */
 
-.grecaptcha-badge {
-  visibility: hidden;
-}
-
 /* Media Queries */
 
 @media (max-width: 600px) {

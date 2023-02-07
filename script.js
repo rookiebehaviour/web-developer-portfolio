@@ -37,42 +37,47 @@ dropdownBtn.addEventListener("click", function () {
 });
 
 // Form submission - Formspree
-document.addEventListener("DOMContentLoaded", function () {
-  let form = document.getElementById("contact-form");
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    let name = event.target.name.value;
-    let status = document.getElementById("contact-form-status");
-    let data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
+let form = document.getElementById("contact-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  let name = event.target.name.value;
+  let status = document.getElementById("contact-form-status");
+  let data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.innerText = `Thanks ${name}, your message was sent to Jacqueline!`;
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            status.innerText = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            status.innerText =
+              "Oops! There was a problem submitting your message, please retry.";
+          }
+        });
+      }
     })
-      .then((response) => {
-        if (response.ok) {
-          status.innerText = `Thanks ${name}, your message was sent to Jacqueline!`;
-          form.reset();
-        } else {
-          response.json().then((data) => {
-            if (Object.hasOwn(data, "errors")) {
-              status.innerText = data["errors"]
-                .map((error) => error["message"])
-                .join(", ");
-            } else {
-              status.innerText =
-                "Oops! There was a problem submitting your message, please retry.";
-            }
-          });
-        }
-      })
-      .catch((error) => {
-        status.innerText =
-          "Oops! There was a problem submitting your message, please retry.";
-      });
+    .catch((error) => {
+      status.innerText =
+        "Oops! There was a problem submitting your message, please retry.";
+    });
+}
+form.addEventListener("submit", handleSubmit);
+
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
   }
-  form.addEventListener("submit", handleSubmit);
-});
+};

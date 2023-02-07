@@ -11,6 +11,12 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      var onSubmit = function (token) {
+        document.getElementById("contact-form").submit();
+        console.log("success!");
+      };
+    </script>
     <script src="script.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -406,14 +412,16 @@
                 </label>
               </p>
               <div
-                id="form-captcha"
                 class="g-recaptcha"
                 data-sitekey="6LewZjgkAAAAAINHG-vluwg5ryidmwvk89tBI92Z"
+              ></div>
+              <button
+                id="form-recaptcha"
+                class="btn btn-background-slide"
                 data-callback="onSubmit"
                 data-size="invisible"
-              ></div>
-
-              <button class="btn btn-background-slide" type="submit">
+                type="submit"
+              >
                 Send
               </button>
               <br />
@@ -511,10 +519,5 @@
         </div>
       </footer>
     </div>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
-    </script>
   </body>
 </html>
