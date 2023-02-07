@@ -246,12 +246,6 @@ form button {
   border-radius: 8px;
   border-bottom: 2px dotted white;
   transition: all 200ms ease-in-out;
-
-  --red-gradient: radial-gradient(
-    circle at 50.4% 50.5%,
-    rgb(251, 32, 86) 0%,
-    rgb(135, 2, 35) 90%
-  );
 }
 
 .btn:hover {
