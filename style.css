@@ -442,7 +442,7 @@ footer {
   border-top: 3px dotted white;
 }
 
-footer h5 {
+footer .heading {
   background: var(--red-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -464,8 +464,6 @@ footer li p {
   gap: 1rem;
   padding: 2rem;
 }
-
-/* Google Captcha */
 
 /* Media Queries */
 
