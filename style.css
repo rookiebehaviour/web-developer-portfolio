@@ -556,6 +556,11 @@ footer li p {
     padding-left: 1rem;
   }
 
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
   .project-image img:hover {
     transform: none;
   }
