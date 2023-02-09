@@ -47,6 +47,7 @@ section {
   max-width: 100%;
   padding: 1rem;
   border-top: 3px dotted white;
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown-content {
@@ -151,6 +152,7 @@ main {
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
 }
 
 main h1 {
@@ -450,6 +452,7 @@ footer {
   color: white;
   padding: 2rem 4rem;
   border-top: 3px dotted white;
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
 }
 
 footer .heading {
@@ -458,6 +461,7 @@ footer .heading {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.25rem;
+  filter: brightness(2);
 }
 
 footer li {
