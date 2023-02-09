@@ -167,7 +167,7 @@ main h3 {
 }
 
 main a button {
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 
 .intro {
@@ -252,6 +252,7 @@ form button {
 
 .btn:hover {
   background: var(--red-gradient);
+  transform: scale(1.05);
 }
 
 .button-container button {
@@ -283,14 +284,15 @@ form button {
 
 #about .content {
   margin: 0 auto;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
   padding: 2rem;
+  margin-top: 1rem;
   border-radius: 8px;
 }
 
 .profile-photo {
   padding: 1rem;
-  max-width: 20rem;
+  max-width: 300px;
   border-radius: 50%;
   filter: drop-shadow(5px 5px 5px);
   border-bottom: 3px dotted white;
@@ -301,6 +303,7 @@ form button {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
   padding: 0 1rem 1rem 1rem;
 }
 
@@ -336,7 +339,7 @@ form button {
 }
 
 .project-image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .project-border {
@@ -348,7 +351,7 @@ form button {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Other Projects Page */
@@ -408,7 +411,7 @@ footer a {
 
 .say-hello {
   max-width: 450px;
-  box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 8px;
 }
