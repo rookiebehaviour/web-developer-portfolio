@@ -247,6 +247,7 @@ form button {
   border-radius: 8px;
   border-bottom: 2px dotted white;
   transition: all 200ms ease-in-out;
+  box-shadow: -6px 10px 6px rgba(0, 0, 0, 0.4);
 }
 
 .btn:hover {
@@ -282,6 +283,9 @@ form button {
 
 #about .content {
   margin: 0 auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 .profile-photo {
@@ -344,6 +348,7 @@ form button {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Other Projects Page */
@@ -403,6 +408,9 @@ footer a {
 
 .say-hello {
   max-width: 450px;
+  box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 form input,
@@ -555,5 +563,9 @@ footer li p {
 
   .reach-out {
     display: none;
+  }
+
+  .say-hello {
+    box-shadow: none;
   }
 }
