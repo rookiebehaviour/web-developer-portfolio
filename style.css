@@ -58,7 +58,7 @@ section {
 }
 
 .show {
-  max-height: 500px;
+  max-height: 1000px;
 }
 
 .content {
@@ -168,7 +168,7 @@ main h3 {
   font-size: 28px;
 }
 
-main a button {
+main button.btn {
   font-size: 24px;
 }
 
@@ -360,8 +360,8 @@ form button {
   height: 225px;
   margin-bottom: 1rem;
   border-radius: 5px;
-  transition: opacity 1.5s ease-in-out;
-  transition: filter 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in;
+  transition: filter 1.5s ease-in;
 }
 .project-border:hover .project-info {
   opacity: 1;
@@ -514,7 +514,7 @@ footer li p {
 
 @media (max-width: 600px) {
   nav ul {
-    font-size: 22px;
+    display: none;
   }
 
   main h1 {
@@ -532,10 +532,6 @@ footer li p {
 
   footer {
     padding: 1rem;
-  }
-
-  main a {
-    font-size: 1.2rem;
   }
 
   section .about-me p {
