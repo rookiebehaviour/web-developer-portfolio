@@ -139,7 +139,7 @@ header h4 {
 }
 
 header h3 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 header img {
@@ -232,6 +232,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 4;
+  transition: opacity 0.5s ease;
   animation: delayedIntro2 5s 22s 1 linear forwards;
 }
 

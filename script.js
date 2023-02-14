@@ -81,3 +81,22 @@ window.onbeforeunload = () => {
     form.reset();
   }
 };
+
+// Skip Intro Animation
+
+// Get a reference to the Skip button
+const skipButton = document.getElementById("skip-animation");
+
+// Add a click event listener to the Skip button
+skipButton.addEventListener("click", () => {
+  // Set a cookie to indicate that the user has chosen to skip the animation
+  document.cookie = "skipAnimation=true; path=/";
+
+  // Redirect the user to the home page
+  window.location.href = "#home";
+
+  // Show the navbar
+  const navbar = document.querySelector("nav");
+  navbar.style.opacity = "1";
+  navbar.style.animation = "none";
+});
