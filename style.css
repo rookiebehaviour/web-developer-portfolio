@@ -691,6 +691,10 @@ footer li p {
     font-size: 1.5rem;
   }
 
+  header a {
+    bottom: 6rem;
+  }
+
   header h3 {
     font-size: 0.75rem;
   }
