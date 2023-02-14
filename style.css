@@ -697,9 +697,12 @@ footer li p {
     bottom: 6rem;
   }
 
-  header h3,
-  main h3 {
+  header h3 {
     font-size: 14px;
+  }
+
+  main h3 {
+    font-size: 18px;
   }
 
   header h4 {
