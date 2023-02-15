@@ -453,6 +453,10 @@ form button {
   border-radius: 8px;
 }
 
+#about button {
+  font-size: 16px;
+}
+
 .profile-photo {
   padding: 1rem;
   max-width: 300px;
