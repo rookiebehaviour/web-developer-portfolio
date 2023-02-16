@@ -20,7 +20,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -29,6 +29,7 @@ body::-webkit-scrollbar-track {
     rgb(251, 32, 86) 0%,
     rgb(135, 2, 35) 90%
   );
+  border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -39,7 +40,7 @@ body::-webkit-scrollbar-thumb {
     rgba(41, 46, 73, 1) 65%
   );
   border-radius: 5px;
-  border: 2px dotted white;
+  border: 1px solid white;
 }
 
 main,
@@ -86,20 +87,20 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
   min-height: 100vh;
-  align-items: center;
   padding: 1rem;
 }
 
 header a {
   margin: 0 auto;
-  text-align: right;
+
   opacity: 0;
   position: absolute;
   bottom: 3rem;
-  right: 12px;
+  right: 20px;
   animation: blink 3s 6 linear forwards;
 }
 
@@ -126,6 +127,7 @@ header p {
   transition: delayedIntro2 150ms ease-in-out;
   line-height: 2;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 header h3,
@@ -136,6 +138,7 @@ header h4 {
   transition: delayedIntro 150ms ease-in;
   line-height: 3;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 header h3 {
@@ -294,18 +297,13 @@ main,
   min-height: 100vh;
 }
 
-/*
 #about,
 .other-projects {
-  background: #536976;
-  background: -webkit-linear-gradient(to bottom, #292e49, #536976);
-  background: linear-gradient(to bottom, #292e49, #536976);
-  color: white;
   max-width: 100%;
   padding: 1rem;
   min-height: 100vh;
 }
-*/
+
 /* Main Home Page */
 
 main {
@@ -492,7 +490,7 @@ form button {
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   padding: 1rem;
@@ -521,13 +519,19 @@ form button {
 }
 
 .project-image img {
-  max-width: 450px;
-  height: 250px;
+  max-width: 100%;
+  max-height: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
   transition: opacity 1.5s ease-in;
   transition: filter 1.5s ease-in;
 }
+
+#projects li,
+.other-projects li {
+  padding: 0.5rem;
+}
+
 .project-border:hover .project-info {
   opacity: 1;
 }
@@ -543,7 +547,7 @@ form button {
 
 .project-border {
   position: relative;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   border-radius: 8px;
   text-align: center;
@@ -663,7 +667,10 @@ footer li p {
 
 /* Media Queries */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+  header img {
+    max-width: 130px;
+  }
   main h1 {
     font-size: 2.5rem;
     margin: 3rem 0 2rem 0;
@@ -690,6 +697,7 @@ footer li p {
 
   header h3 {
     font-size: 14px;
+    line-height: 2;
   }
 
   main h3 {
@@ -715,10 +723,6 @@ footer li p {
   form {
     margin-top: 2rem;
     max-height: 100vh;
-  }
-
-  #projects li {
-    padding: 0.5rem;
   }
 
   .intro {
