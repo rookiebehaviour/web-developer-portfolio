@@ -101,7 +101,7 @@ header a {
   position: absolute;
   bottom: 3rem;
   right: 20px;
-  animation: blink 3s 6 linear forwards;
+  animation: blink 3s 5 linear forwards;
 }
 
 header h1 {
