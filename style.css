@@ -29,7 +29,6 @@ body::-webkit-scrollbar-track {
     rgb(251, 32, 86) 0%,
     rgb(135, 2, 35) 90%
   );
-  border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -39,7 +38,7 @@ body::-webkit-scrollbar-thumb {
     rgba(83, 105, 118, 1) 0%,
     rgba(41, 46, 73, 1) 65%
   );
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid white;
 }
 
