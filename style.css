@@ -322,10 +322,19 @@ main h1 {
 
 main h2 {
   font-size: 42px;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 main h3 {
   font-size: 28px;
+  font-family: sans-serif;
+  background: var(--red-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 main button.btn {
