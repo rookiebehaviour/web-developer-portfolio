@@ -123,7 +123,7 @@ header h2 {
 header p {
   font-size: 18px;
   opacity: 0;
-  animation: delayedIntro2 10s 10s 1 linear;
+  animation: delayedIntro2 8s 10s 1 linear;
   transition: delayedIntro2 150ms ease-in-out;
   line-height: 2;
   letter-spacing: 2px;
@@ -134,7 +134,7 @@ header h3,
 header h4 {
   color: transparent;
   opacity: 0;
-  animation: delayedIntro 5s 21s 1 forwards;
+  animation: delayedIntro 5s 19s 1 forwards;
   transition: delayedIntro 150ms ease-in;
   line-height: 3;
   letter-spacing: 2px;
@@ -149,7 +149,7 @@ header img {
   opacity: 0;
   max-width: 150px;
   border-radius: 50%;
-  animation: imageDelayedIntro 5s 20s 1 linear forwards;
+  animation: imageDelayedIntro 5s 18s 1 linear forwards;
 }
 
 @keyframes fadeIn {
@@ -238,7 +238,7 @@ nav {
   left: 0;
   z-index: 4;
   transition: opacity 0.5s ease;
-  animation: delayedIntro2 5s 22s 1 linear forwards;
+  animation: delayedIntro2 5s 20s 1 linear forwards;
 }
 
 nav ul {
