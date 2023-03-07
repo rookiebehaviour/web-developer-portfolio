@@ -1,4 +1,6 @@
-/* Root & high hierchy elements */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap");
+
+/* Root & high hierarchy elements */
 
 :root {
   --red-gradient: radial-gradient(
