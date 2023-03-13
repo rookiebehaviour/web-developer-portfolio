@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jacqueline-mason.netlify.app
+Token: faf5e09504e3687b73678cc81363a04aba517ce0159a01de297ca492503733c3
