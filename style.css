@@ -3,16 +3,12 @@
 /* Root & high hierarchy elements */
 
 :root {
-  --red-gradient: radial-gradient(
+  --purple-gradient: radial-gradient(
     circle at 50.4% 50.5%,
-    rgb(251, 32, 86) 0%,
-    rgb(179, 8, 50) 90%
+    rgb(160, 151, 230) 0%,
+    rgb(62, 25, 116) 90%
   );
-  --blue-gradient: linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 65%
-  );
+  --blue-gradient: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
   --offset: 6px;
 }
 
@@ -32,7 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--red-gradient);
+  background: white;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -87,12 +83,11 @@ header h1 {
 }
 
 header h2 {
-  width: 880px;
+  width: 580px;
   font-size: 100px;
   line-height: 1.06;
   letter-spacing: -0.02em;
   word-spacing: 5px;
-  color: #1d1d1f;
   margin-bottom: 0.5rem;
 }
 
@@ -127,19 +122,15 @@ header h2 {
 }
 
 .mask span:nth-child(1) {
-  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+  background-image: var(--blue-gradient);
 }
 
 .mask span:nth-child(2) {
-  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+  background-image: var(--blue-gradient);
 }
 
 .mask span:nth-child(3) {
-  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
-}
-
-.mask span:nth-child(4) {
-  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
+  background-image: var(--blue-gradient);
 }
 
 /* Navagation and Anchor Links */
@@ -156,7 +147,7 @@ a {
 
 #contact a:hover,
 footer a:hover {
-  background: var(--red-gradient);
+  background: var(--blue-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -197,29 +188,7 @@ form button {
 
 .btn {
   background: rgb(83, 105, 118);
-  background: linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
-
-  background: -moz-linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
-
-  background: -webkit-linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
-
-  background: linear-gradient(
-    16deg,
-    rgba(83, 105, 118, 1) 0%,
-    rgba(41, 46, 73, 1) 35%
-  );
+  background: var(--blue-gradient);
 
   color: white;
   border: none;
@@ -235,7 +204,7 @@ form button {
 }
 
 .btn:hover {
-  background: var(--red-gradient);
+  background: var(--purple-gradient);
   transform: scale(1.05);
 }
 
@@ -426,7 +395,7 @@ footer a {
 
 .reach-out {
   font-weight: bold;
-  background: var(--red-gradient);
+  background: var(--blue-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -470,7 +439,7 @@ footer {
 }
 
 footer .heading {
-  background: var(--red-gradient);
+  background: var(--blue-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
