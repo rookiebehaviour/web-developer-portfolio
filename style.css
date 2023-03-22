@@ -42,7 +42,6 @@ body::-webkit-scrollbar-thumb {
   border: 1px dotted white;
 }
 
-main,
 section {
   min-height: 100vh;
   max-width: 100%;
@@ -143,48 +142,7 @@ header h2 {
   background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
 }
 
-header a {
-  margin: 0 auto;
-  opacity: 0;
-  position: absolute;
-  bottom: 3rem;
-  right: 20px;
-}
-
-header h3 {
-  font-size: 30px;
-  font-weight: bold;
-  background: var(--red-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Navagation and Anchor Links */
-
-nav {
-  display: flex;
-  opacity: 0;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 4;
-}
-
-nav ul {
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1;
-  font-size: 30px;
-}
-
-nav ul li {
-  filter: drop-shadow(2px 2px 3px black);
-}
 
 li {
   list-style: none;
@@ -196,14 +154,6 @@ a {
   text-decoration: dotted;
 }
 
-.nav-item.active {
-  background: var(--red-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-nav a:hover,
 #contact a:hover,
 footer a:hover {
   background: var(--red-gradient);
@@ -216,7 +166,6 @@ footer a:hover {
 /* Multiple Sections */
 
 header,
-main,
 #projects,
 #contact,
 #about,
@@ -234,55 +183,6 @@ main,
   max-width: 100%;
   padding: 1rem;
   min-height: 100vh;
-}
-
-/* Main Home Page */
-
-main {
-  background-color: #0f0c29;
-  background-image: url("/images/programmer-silhouette.png"),
-    linear-gradient(to bottom, #1a1a1b, #353437, #4f4e52);
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  box-shadow: inset 4px 5px 20px 6px rgba(0, 0, 0, 0.4);
-}
-
-main h1 {
-  font-size: 50px;
-  margin: 3rem 0 2rem 0;
-}
-
-main h2 {
-  font-size: 42px;
-  font-family: sans-serif;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-}
-
-main h3 {
-  font-size: 28px;
-  font-family: sans-serif;
-  background: var(--red-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  word-spacing: 4px;
-}
-
-main button.btn {
-  font-size: 24px;
-}
-
-.title {
-  text-align: center;
-}
-
-.title h1 {
-  background: var(--red-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Button Elements */
@@ -609,11 +509,6 @@ footer li p {
     padding-left: 1rem;
   }
 
-  main h1 {
-    font-size: 2.5rem;
-    margin: 3rem 0 2rem 0;
-  }
-
   header h1 {
     font-size: 32px;
     padding: 1rem;
@@ -623,14 +518,6 @@ footer li p {
   header h2 {
     width: 340px;
     font-size: 40px;
-  }
-
-  main button {
-    margin: 0;
-  }
-
-  main h2 {
-    font-size: 42px;
   }
 
   header a {
