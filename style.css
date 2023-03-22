@@ -296,7 +296,7 @@ form button {
   height: 100%;
   padding: 2rem 1rem;
   opacity: 0;
-  transition: opacity 1.5s ease-in;
+  transition: opacity 250ms ease-in;
   border-radius: 8px;
   z-index: 1;
 }
@@ -313,8 +313,8 @@ form button {
   max-height: 100%;
   margin-bottom: 1rem;
   border-radius: 5px;
-  transition: opacity 1.5s ease-in;
-  transition: filter 1.5s ease-in;
+  transition: opacity 250ms ease-in;
+  transition: filter 250ms ease-in;
 }
 
 #projects li,
